@@ -16,14 +16,14 @@ const CarsList = function () {
   }
 
   if (isSuccess) {
-    const hasMoreVehicles = data?.vehicles.length < data?.total;
+    const hasMoreVehicles = data?.cars.length < data?.total;
 
     return (
       <>
         <ul className={cl["vehicles-list"]}>
-          {data?.vehicles.length ? (
-            data?.vehicles?.map((vehicle) => (
-              <CarCard key={vehicle._id} vehicle={vehicle} />
+          {data?.cars.length ? (
+            data?.cars?.map((car) => (
+              <CarCard key={car._id} car={car} />
             ))
           ) : (
             <p>No matches found</p>

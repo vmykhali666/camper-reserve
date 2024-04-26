@@ -9,7 +9,7 @@ import { IconPack } from "helpers/IconPack";
 import useScreenSize from "hooks/useScreenSize";
 import cl from "styles/CarCard.module.css";
 
-const CarCard = ({ vehicle }) => {
+const CarCard = ({ car }) => {
   const {
     _id,
     name,
@@ -20,7 +20,7 @@ const CarCard = ({ vehicle }) => {
     rating,
     reviews,
     gallery,
-  } = vehicle;
+  } = car;
 
   const { favorites } = useSelector((state) => state.favorites);
   const isProductInFavorites = favorites.some((v) => v._id === _id);
@@ -29,7 +29,7 @@ const CarCard = ({ vehicle }) => {
   const location = useLocation();
   const handleFavoriteToggle = () => {
     if (!isProductInFavorites) {
-      dispatch(addToFavorites(vehicle));
+      dispatch(addToFavorites(car));
     } else {
       dispatch(removeFromFavorites(_id));
     }

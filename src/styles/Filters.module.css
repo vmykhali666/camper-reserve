@@ -1,8 +1,6 @@
 .filter-container {
     margin-top: 135px;
     @media (1440px<=width) {
-      position: fixed;
-      left: 64px;
       width: 30%;
       top: 135px;
       margin-top: 0;

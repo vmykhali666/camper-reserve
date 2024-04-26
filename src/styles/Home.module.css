@@ -1,0 +1,41 @@
+.section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: 135px;
+    background-image: url("images/bg.jpg");
+    background-position: center;
+    background-color: var(--primary-text-color);
+    background-size: cover;
+    overflow: hidden;
+
+    .content-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .title {
+        position: absolute;
+        left: 20px;
+        font-size: 80px;
+        font-weight: 600px;
+        color: var(--white-color);
+        width: 50%;
+        background-color: var(--accent-color);
+
+        @media (min-width: 768px) {
+            font-size: 130px;
+            left: 32px;
+        }
+
+        @media (min-width: 1440px) {
+            font-size: 160px;
+            right: 64px;
+            margin-left: auto;
+        }
+    }
+}
+  

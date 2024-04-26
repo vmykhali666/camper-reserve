@@ -15,23 +15,27 @@ const Features = function () {
     <div className={cl["features-container"]}>
       <div className={cl["features-wrapper"]}>
         <ul className={cl["features-list"]}>
-          {Object.entries(carDetails.details).map(([key, value]) => {
-            if (value && key !== "bathroom") {
-              return (
-                <Button
-                  tag="li"
-                  className="box-details"
-                  key={`vehicle-card-details-${key}`}
-                >
-                  <IconPack id={key} />
-                  <p>
-                    <span>{value}</span>
-                    <span> {key}</span>
-                  </p>
-                </Button>
-              );
+        {Object.entries(carDetails?.details).map(
+            ([key, value], index) => {
+              if (value && key !== "bathroom") {
+                return (
+                  <Button
+                    tag="li"
+                    className="box-details"
+                    key={`vehicle-card-details-${key}`}
+                  >
+                    <IconPack id={key} />
+                    <p>
+                      <span>{value}</span>
+                      <span> {key}</span>
+                    </p>
+                  </Button>
+                );
+              }
+
+              return null;
             }
-          })}
+          )}
         </ul>
 
         <div>

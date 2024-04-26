@@ -1,7 +1,7 @@
-.btn-search,
 .btn-reset,
 .btn-loadmore,
-.btn-submit {
+.btn-submit,
+.btn-search {
   padding: 16px 40px;
   width: fit-content;
   background-color: var(--accent-color);
@@ -16,7 +16,6 @@
   background-color: var(--container-light-bg);
   color: var(--primary-text-color);
 }
-
 .box-details {
   display: flex;
   gap: 8px;
@@ -27,9 +26,8 @@
   line-height: 1.25;
   font-weight: 500;
   border-radius: 20px;
-
-  & p {
-    display: flex;
-    gap: 4px;
-  }
+}
+.box-details p {
+  display: flex;
+  gap: 4px;
 }

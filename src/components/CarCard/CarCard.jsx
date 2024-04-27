@@ -112,6 +112,7 @@ const CarCard = ({ car }) => {
                 </Button>
               );
             }
+            return null;
           })}
         </ul>
         <Button className="btn-loadmore" type="button" tag="button">

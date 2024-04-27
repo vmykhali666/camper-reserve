@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useStateContext } from "context/StateContext";
 import LocationFilter from "components/LocationFilter/LocationFilter";
 import EquipmentFilter from "components/EquipmentFilter/EquipmentFilter";
@@ -22,7 +21,6 @@ const INITIAL_FILTERS = {
 };
 
 const Filters = function () {
-  const navigate = useNavigate();
 
   const [selectedFilters, setSelectedFilters] = useState(INITIAL_FILTERS);
 
@@ -37,6 +35,7 @@ const Filters = function () {
     });
 
     setSelectedFilters(updatedFilters);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   const handleFilterChange = (filterKey, value, isChecked) => {

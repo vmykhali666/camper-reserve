@@ -1,9 +1,10 @@
 .header {
   display: block;
   width: 100%;
-  background-color: white;
+  background-color: var(--primary-text-color);
   padding: 24px 0;
   margin-bottom: 24px;
+  color: white;
 }
 
 .headerWrapper {

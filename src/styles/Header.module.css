@@ -5,8 +5,7 @@
   padding: 28px 0;
   height: 75px;
   border: 1px solid rgba(16, 24, 40, 0.1254901961);
-  margin-bottom: 64px;
-  z-index: 100;
+  margin-bottom: 25px;
 }
 
 .headerWrapper {

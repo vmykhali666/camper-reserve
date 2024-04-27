@@ -5,11 +5,13 @@ import cl from "styles/Catalog.module.css";
 
 const Catalog = function () {
   return (
-    <div className={cl["catalog-container"]}>
-      <Filters />
-      <CarsList />
-      <Outlet />
-    </div>
+    <section className={cl.section}>
+      <div className={cl["catalog-container"]}>
+        <Filters />
+        <CarsList />
+        <Outlet />
+      </div>
+    </section>
   );
 };
 

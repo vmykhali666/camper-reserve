@@ -73,7 +73,7 @@ const FavoriteCard = ({ vehicle }) => {
           <div className={cl["info-wrapper"]}>
             <p className={cl.rating}>
               <Icon id="rating" />
-              <Link to={`vehicle/${_id}/reviews`}>
+              <Link to={`cars/${_id}/reviews`}>
                 <span>{rating}</span>
                 <span className={cl["reviews-number"]}>
                   ({reviews.length}
@@ -115,7 +115,7 @@ const FavoriteCard = ({ vehicle }) => {
           })}
         </ul>
         <Button className="btn-loadmore" type="button" tag="button">
-          <Link to={`vehicle/${_id}/features`}>Show More</Link>
+          <Link to={`cars/${_id}/features`}>Show More</Link>
         </Button>
       </div>
     </li>

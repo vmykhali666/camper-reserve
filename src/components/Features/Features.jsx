@@ -22,7 +22,7 @@ const Features = function () {
                   <Button
                     tag="li"
                     className="box-details"
-                    key={`vehicle-card-details-${key}`}
+                    key={`cars-card-details-${key}`}
                   >
                     <IconPack id={key} />
                     <p>

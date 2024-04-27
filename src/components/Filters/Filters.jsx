@@ -7,6 +7,7 @@ import VenicleType from "components/CarType/CarType";
 import Button from "components/Button/Button";
 
 import cl from "styles/Filters.module.css";
+import { LIMIT } from "constants";
 
 const INITIAL_FILTERS = {
   location: "",
@@ -16,7 +17,7 @@ const INITIAL_FILTERS = {
   bathroom: "",
   kitchen: "",
   TV: "",
-  limit: 10,
+  limit: LIMIT,
   page: 1,
 };
 
@@ -72,13 +73,6 @@ const Filters = function () {
     handleFilterChange(filterKey, target.value, target.checked);
   };
 
-  const handleReset = () => {
-    setSelectedFilters((prevFilters) => ({
-      ...prevFilters,
-      ...INITIAL_FILTERS,
-    }));
-    navigate("/catalog");
-  };
   return (
     <div className={cl["filter-container"]}>
       <LocationFilter onChange={onChange} selectedFilters={selectedFilters} />
@@ -100,15 +94,6 @@ const Filters = function () {
           onClick={handleFilter}
         >
           Search
-        </Button>
-
-        <Button
-          className="btn-reset"
-          type="button"
-          tag="button"
-          onClick={handleReset}
-        >
-          Reset
         </Button>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { LIMIT } from "constants";
 
 export const carsApi = createApi({
   reducerPath: "carsApi",
@@ -14,7 +15,7 @@ export const carsApi = createApi({
       transformResponse: (response) => {
         let params = new URLSearchParams(document.location.search);
         const page = Number(params.get("page") || 1);
-        const limit = Number(params.get("limit") || 10);
+        const limit = Number(params.get("limit") || LIMIT);
 
         const filters = {};
         for (const [key, value] of params.entries()) {

@@ -20,7 +20,7 @@ const CarsList = function () {
 
     return (
       <>
-        <ul className={cl["vehicles-list"]}>
+        <ul className={cl["cars-list"]}>
           {data?.cars.length ? (
             data?.cars?.map((car) => (
               <CarCard key={car._id} car={car} />

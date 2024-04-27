@@ -73,7 +73,7 @@ const CarCard = ({ car }) => {
           <div className={cl["info-wrapper"]}>
             <p className={cl.rating}>
               <IconPack id="rating" />
-              <Link to={`vehicle/${_id}/reviews`} state={{ from: location }}>
+              <Link to={`cars/${_id}/reviews`} state={{ from: location }}>
                 <span>{rating}</span>
                 <span className={cl["reviews-number"]}>
                   ({reviews.length}
@@ -115,7 +115,7 @@ const CarCard = ({ car }) => {
           })}
         </ul>
         <Button className="btn-loadmore" type="button" tag="button">
-          <Link to={`vehicle/${_id}/features`} state={{ from: location }}>
+          <Link to={`cars/${_id}/features`} state={{ from: location }}>
             Show More
           </Link>
         </Button>

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcamper_reserve=self.webpackChunkcamper_reserve||[]).push([[102],{102:function(e,r,n){n.r(r),n.d(r,{default:function(){return i}});var s="Home_section__QrXq7",c="Home_content-wrapper__fGC0Z",a="Home_title__ANWNn",t=n(184),i=function(){return(0,t.jsx)("section",{className:s,children:(0,t.jsx)("div",{className:c,children:(0,t.jsx)("h1",{className:a,children:"The Camper Reservation"})})})}}}]);
+//# sourceMappingURL=102.dbbb4ceb.chunk.js.map

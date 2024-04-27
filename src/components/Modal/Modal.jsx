@@ -39,10 +39,9 @@ const Modal = () => {
 
   const handleCloseModal = () => {
     navigate(
-      location.state?.from
-        ? location.state.from
-        : `/${location.pathname.split("/")[1]}`
+        `/${location.pathname.split("/")[1]}`
     );
+
     handleScrollToSection(id);
     document.body.classList.remove("lock");
   };

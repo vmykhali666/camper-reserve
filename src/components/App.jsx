@@ -5,9 +5,9 @@ import { Layout } from "layout/Layout";
 import Modal from "components/Modal/Modal";
 
 export const App = () => {
-  const HomePage = lazy(() => import("pages/Home/Home"));
-  const FavoritesPage = lazy(() => import("pages/Favorites/Favorites"));
-  const CatalogPage = lazy(() => import("pages/Catalog/Catalog"));
+  const Home = lazy(() => import("pages/Home/Home"));
+  const Favorites = lazy(() => import("pages/Favorites/Favorites"));
+  const Catalog = lazy(() => import("pages/Catalog/Catalog"));
   const Features = lazy(() => import("components/Features/Features"));
   const Reviews = lazy(() => import("components/Reviews/Reviews"));
 
@@ -23,14 +23,14 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="catalog" element={<CatalogPage />}>
+        <Route index element={<Home />} />
+        <Route path="catalog" element={<Catalog/>}>
           <Route path="cars/:id" element={<Modal />}>
             <Route path="features" element={<Features />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
-        <Route path="favorites" element={<FavoritesPage />}>
+        <Route path="favorites" element={<Favorites />}>
           <Route path="cars/:id" element={<Modal />}>
             <Route path="features" element={<Features />} />
             <Route path="reviews" element={<Reviews />} />
@@ -38,7 +38,7 @@ export const App = () => {
         </Route>
       </Route>
 
-      <Route path="*" element={<HomePage />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 };

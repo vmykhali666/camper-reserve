@@ -1,9 +1,9 @@
 .section {
     position: absolute;
     left: 0;
-    top: 75px;
+    top: 98px;
     width: 100%;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 98px);
     background-image: url("images/bg.jpg");
     background-position: center;
     background-color: var(--primary-text-color);
